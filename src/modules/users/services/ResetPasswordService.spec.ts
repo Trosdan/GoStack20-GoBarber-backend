@@ -89,6 +89,4 @@ describe('ResetPasswordService', () => {
       }),
     ).rejects.toBeInstanceOf(AppError);
   });
-
-  // 2h expiração
 });
