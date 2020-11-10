@@ -29,7 +29,7 @@ class CreateUserService {
       throw new AppError('Email addres already used;');
     }
 
-    const hashedPassword = await this.hashProvider.generatehash(password);
+    const hashedPassword = await this.hashProvider.generateHash(password);
 
     const user = await this.usersRepository.create({
       name,
