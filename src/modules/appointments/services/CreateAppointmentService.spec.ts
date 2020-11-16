@@ -43,6 +43,10 @@ describe('CreateAppointment', () => {
       provider_id: 'provider_id',
     });
 
+    jest.spyOn(Date, 'now').mockImplementationOnce(() => {
+      return new Date(2020, 4, 10, 10).getTime();
+    });
+
     await expect(
       createAppointment.execute({
         date: appointmentDate,
